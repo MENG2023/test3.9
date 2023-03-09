@@ -1,0 +1,64 @@
+1.2 NULL约束
+创建表时，可以指定某列不为空：
+1.3 UNIQUE：唯一约束
+指定sn列为唯一的、不重复的：
+-- 重新设置学生表结构
+DROP TABLE IF EXISTS student;
+CREATE TABLE student (
+id INT NOT NULL,
+sn INT,
+name VARCHAR(20),
+qq_mail VARCHAR(20)
+);
+-- 重新设置学生表结构
+DROP TABLE IF EXISTS student;
+CREATE TABLE student (
+id INT NOT NULL,
+sn INT UNIQUE,
+name VARCHAR(20),
+qq_mail VARCHAR(20)
+);
+
+1.4 DEFAULT : 默认值约束
+指定插入数据时,name列为空,默认值unkown:
+--重新设置学生表结构
+drop  table if exists student;
+create table student (
+  id int not null,
+  sn int unique,
+  name varchar(20) default 'unkown',
+  qq_mail varchar(20)
+);
+
+
+1.5 PRIMARY KEY:主键约束
+指定 id列为主键:
+--重新设置学生表结构
+drop table if exists student;
+create table student (
+ id int not null PRIMARY KEY,
+  sn int UNIQUE,
+  name varchar(20) DEFAULT 'unkown',
+  qq-mail varchar(20)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
